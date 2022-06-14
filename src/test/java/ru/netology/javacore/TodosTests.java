@@ -22,6 +22,24 @@ public class TodosTests {
     }
 
     @org.junit.jupiter.api.Test
+    public void testTodosAddTasks(){
+        // given:
+        List<String> expected = new ArrayList<>();
+        expected.add("task #A");
+        expected.add("task #C");
+        expected.add("task #B");
+
+        // when:
+        Todos todos = new Todos();
+        todos.addTask("task #A");
+        todos.addTask("task #C");
+        todos.addTask("task #B");
+        List<String> result = todos.getTasks();
+        // then:
+        Assertions.assertEquals(expected, result);
+    }
+
+    @org.junit.jupiter.api.Test
     public void testTodosRemoveTask(){
         // given:
         String expected = "task #A task #B";
@@ -35,20 +53,5 @@ public class TodosTests {
         // then:
         Assertions.assertEquals(expected, result);
     }
-
-//    @org.junit.jupiter.api.Test
-//    public void testTodosGetAllTasks(){
-//        // given:
-//        String expected = "task #A task #B task #C";
-//        Todos todos = new Todos();
-//        todos.addTask("task #A");
-//        todos.addTask("task #C");
-//        todos.addTask("task #B");
-//        // when:
-//        String result = todos.getAllTasks();
-//        // then:
-//        Assertions.assertEquals(expected, result);
-//    }
-
 
 }

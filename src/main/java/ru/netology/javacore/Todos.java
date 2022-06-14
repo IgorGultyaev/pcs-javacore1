@@ -22,6 +22,7 @@ public class Todos {
         return stringBuilder.delete(stringBuilder.length()-1,stringBuilder.length()).toString();
     }
 
-
-
+    public List<String> getTasks() {
+        return new ArrayList<>(tasks);
+    }
 }
