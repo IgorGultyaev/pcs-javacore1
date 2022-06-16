@@ -38,14 +38,14 @@ public class TodoServer {
                 if (act.equals("ADD")) {
 
                     todos.addTask(json.task);
-                } else if(act.equals("REMOVE")){
+                } else if (act.equals("REMOVE")) {
                     todos.removeTask(json.task);
                 }
                 System.out.println("Список задач: " + todos.getAllTasks());
                 out.println("Задача добавлена, список всех задач: " + todos.getAllTasks());
             }
 
-        } catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Не могу стартовать сервер");
             e.printStackTrace();
         }

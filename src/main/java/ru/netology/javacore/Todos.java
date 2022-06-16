@@ -19,7 +19,7 @@ public class Todos {
         StringBuilder stringBuilder = new StringBuilder();
         Collections.sort(tasks);
         tasks.forEach((value) -> stringBuilder.append(value).append(" "));
-        return stringBuilder.delete(stringBuilder.length()-1,stringBuilder.length()).toString();
+        return stringBuilder.delete(stringBuilder.length() - 1, stringBuilder.length()).toString();
     }
 
     public List<String> getTasks() {

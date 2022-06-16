@@ -8,7 +8,7 @@ import java.util.List;
 public class TodosTests {
 
     @org.junit.jupiter.api.Test
-    public void testTodosGetAllTasks(){
+    public void testTodosGetAllTasks() {
         // given:
         String expected = "task #A task #B task #C";
         Todos todos = new Todos();
@@ -22,7 +22,7 @@ public class TodosTests {
     }
 
     @org.junit.jupiter.api.Test
-    public void testTodosAddTasks(){
+    public void testTodosAddTasks() {
         // given:
         List<String> expected = new ArrayList<>();
         expected.add("task #A");
@@ -40,7 +40,7 @@ public class TodosTests {
     }
 
     @org.junit.jupiter.api.Test
-    public void testTodosRemoveTask(){
+    public void testTodosRemoveTask() {
         // given:
         String expected = "task #A task #B";
         Todos todos = new Todos();
