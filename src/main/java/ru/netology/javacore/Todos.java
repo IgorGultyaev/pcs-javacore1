@@ -5,17 +5,17 @@ import java.util.Collections;
 import java.util.List;
 
 public class Todos {
-    List<String> tasks = new ArrayList<>();
+    private List<String> tasks = new ArrayList<>();
 
-    public void addTask(String task) {
+    protected void addTask(String task) {
         tasks.add(task);
     }
 
-    public void removeTask(String task) {
+    protected void removeTask(String task) {
         tasks.remove(task);
     }
 
-    public String getAllTasks() {
+    protected String getAllTasks() {
         StringBuilder stringBuilder = new StringBuilder();
         Collections.sort(tasks);
         tasks.forEach((value) -> stringBuilder.append(value).append(" "));
